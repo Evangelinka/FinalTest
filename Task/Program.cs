@@ -8,13 +8,13 @@
 // ["1234", "1567", "-2", "computer science"] -> ["-2"]
 // ["Russia", "Denmark", "Kazan"] -> []
 
-void CreateSecondArray(string[] array1, string[] array2)
+void CreateSecondArray(string[] sourceArray, string[] formedArray)
 {
-    for (int i = 0; i < array1.Length; i++)
+    for (int i = 0; i < sourceArray.Length; i++)
     {
-        if (array1[i].Length < 4)
+        if (sourceArray[i].Length < 4)
         {
-            array2[i] = array1[i];
+            formedArray[i] = sourceArray[i];
         }
     }
 }
@@ -30,7 +30,7 @@ void PrintArray(string[] array)
     Console.Write("]");
 }
 
-string[] array1 = new string[4] {"hello", "2", "world", ":-)"};
-string[] array2 = new string[array1.Length];
-CreateSecondArray(array1, array2);
-PrintArray(array2);
+string[] sourceArray = new string[4] {"hello", "2", "world", ":-)"};
+string[] formedArray = new string[sourceArray.Length];
+CreateSecondArray(sourceArray, formedArray);
+PrintArray(formedArray);
